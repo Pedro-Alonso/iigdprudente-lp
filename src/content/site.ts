@@ -56,9 +56,9 @@ export const site = {
     label: "Navegação principal",
     homeLabel: "Início",
     links: [
-      { label: "Cultos", href: "#cultos" },
-      { label: "Quem somos", href: "#quem-somos" },
-      { label: "Onde estamos", href: "#onde-estamos" },
+      { label: "Cultos", href: "/#cultos" },
+      { label: "Quem somos", href: "/#quem-somos" },
+      { label: "Onde estamos", href: "/#onde-estamos" },
     ],
   },
   hero: {

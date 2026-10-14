@@ -14,7 +14,7 @@ export function SiteHeader() {
       </a>
       <Container className="flex flex-col items-center gap-1 py-2 md:flex-row md:justify-between md:py-3">
         <a
-          href="#inicio"
+          href="/"
           aria-label={`${navigation.homeLabel} — ${site.name}`}
           className="flex min-h-11 items-center gap-2 rounded-md px-1 text-white"
         >
