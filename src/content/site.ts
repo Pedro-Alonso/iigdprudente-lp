@@ -54,7 +54,6 @@ export const site = {
   skipLink: "Pular para o conteúdo",
   navigation: {
     label: "Navegação principal",
-    homeLabel: "Início",
     links: [
       { label: "Cultos", href: "/#cultos" },
       { label: "Quem somos", href: "/#quem-somos" },

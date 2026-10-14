@@ -14,11 +14,7 @@ export function SiteHeader() {
         {skipLink}
       </a>
       <Container className="flex flex-col items-center gap-1 py-2 md:flex-row md:justify-between md:py-3">
-        <Link
-          href="/"
-          aria-label={`${navigation.homeLabel} — ${site.name}`}
-          className="flex min-h-11 items-center gap-2 rounded-md px-1 text-white"
-        >
+        <Link href="/" className="flex min-h-11 items-center gap-2 rounded-md px-1 text-white">
           <span className="font-serif text-lg font-semibold sm:text-xl">{wordmark.primary}</span>
           <span aria-hidden="true" className="h-5 w-px bg-gold" />
           <span className="text-sm font-medium tracking-wide text-gold-soft">
