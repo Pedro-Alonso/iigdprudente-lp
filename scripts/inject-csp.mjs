@@ -43,7 +43,6 @@ function buildPolicy(scriptHashes, styleHashes) {
     "object-src 'none'",
     "base-uri 'none'",
     "form-action 'none'",
-    "upgrade-insecure-requests",
   ].join("; ");
 }
 
