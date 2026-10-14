@@ -8,6 +8,14 @@ export type ServiceDay = {
   times: readonly string[];
 };
 
+export type IconName = "clock" | "users" | "mapPin" | "cross" | "heart" | "hands";
+
+export type NavigationLink = {
+  label: string;
+  href: string;
+  icon: IconName;
+};
+
 export type NamedLink = {
   label: string;
   href: string;
@@ -22,12 +30,15 @@ export type SocialProfile = {
 export type Pillar = {
   title: string;
   description: string;
+  icon: IconName;
 };
 
 const domain = "iigdprudente.com.br";
 const legalName = "IGREJA INTERNACIONAL DA GRACA DE DEUS";
 const taxId = "30.902.803/1932-27";
 const city = "Presidente Prudente/SP";
+const street = "Rua Ribeiro de Barros, 751";
+const neighborhood = "Jardim Aviação";
 
 export const site = {
   url: `https://${domain}`,
@@ -55,13 +66,15 @@ export const site = {
   navigation: {
     label: "Navegação principal",
     links: [
-      { label: "Cultos", href: "/#cultos" },
-      { label: "Quem somos", href: "/#quem-somos" },
-      { label: "Onde estamos", href: "/#onde-estamos" },
-    ],
+      { label: "Cultos", href: "/#cultos", icon: "clock" },
+      { label: "Quem somos", href: "/#quem-somos", icon: "users" },
+      { label: "Onde estamos", href: "/#onde-estamos", icon: "mapPin" },
+    ] satisfies readonly NavigationLink[],
   },
   hero: {
-    title: "Igreja da Graça — Presidente Prudente",
+    titleLead: "Igreja da Graça",
+    titleSeparator: " — ",
+    titleHighlight: "Presidente Prudente",
     tagline: "Você é bem-vindo. Venha participar de um de nossos cultos.",
     primaryCta: { label: "Horários dos cultos", href: "#cultos" },
     secondaryCta: { label: "Siga no Instagram", href: "https://instagram.com/iigdprudente" },
@@ -105,21 +118,26 @@ export const site = {
       {
         title: "Temor a Deus",
         description: "Levar o Evangelho a toda criatura, com temor a Deus.",
+        icon: "cross",
       },
       {
         title: "Amor ao próximo",
         description: "Acolher cada pessoa com amor ao próximo.",
+        icon: "heart",
       },
       {
         title: "Serviço à comunidade",
         description: "Auxiliar a comunidade com sermões religiosos e atendimento social.",
+        icon: "hands",
       },
       {
         title: "Fraternidade",
         description: "Promover a fraternidade e o bem-estar social e mental.",
+        icon: "users",
       },
     ] satisfies readonly Pillar[],
     historyTitle: "Nossa história",
+    foundedYear: "1980",
     history:
       "A Igreja Internacional da Graça de Deus foi fundada em 1980 e está ligada ao trabalho do Missionário R. R. Soares. Hoje, tem templos em todo o Brasil e também está presente em outros países, como Estados Unidos, África do Sul, Portugal e Espanha.",
     historyLink: { label: "Conheça a história completa", href: "https://ongrace.com/iigd/" },
@@ -149,8 +167,10 @@ export const site = {
   location: {
     id: "onde-estamos",
     title: "Onde estamos",
-    display: `Rua Ribeiro de Barros, 751 — Jardim Aviação, ${city}`,
-    streetAddress: "Rua Ribeiro de Barros, 751 — Jardim Aviação",
+    street,
+    neighborhood,
+    city,
+    streetAddress: `${street} — ${neighborhood}`,
     addressLocality: "Presidente Prudente",
     addressRegion: "SP",
     addressCountry: "BR",
