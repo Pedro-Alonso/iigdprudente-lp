@@ -67,13 +67,14 @@ A CSP é aplicada por `<meta http-equiv="Content-Security-Policy">`, inserida lo
 ```
 default-src 'self'; script-src 'self' <hashes>; style-src 'self'; img-src 'self' data:;
 font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none';
-form-action 'none'; upgrade-insecure-requests
+form-action 'none'
 ```
 
 - **Hashes, não `'unsafe-inline'`.** O Next.js gera scripts inline (o payload do React Server Components e o JSON-LD). O script calcula o SHA-256 de cada um, página por página, e coloca os hashes em `script-src`. Não foi preciso usar `'unsafe-inline'`.
 - **Nonce não é possível**, porque o site é estático e não existe servidor para gerar um valor novo a cada requisição.
 - **Estilos:** o build não gera `<style>` inline. Se gerar no futuro, os hashes vão automaticamente para `style-src`. Atributos `style="..."` não podem ser autorizados por hash sem `'unsafe-hashes'`, então o script **interrompe o build** se encontrar algum. Para manter a política estrita, não use `style={...}` nos componentes.
 - O script também interrompe o build se não encontrar HTML, se a meta de charset faltar ou se a página já tiver uma CSP.
+- **Sem `upgrade-insecure-requests`.** A diretiva quebrava o carregamento dos recursos enquanto o site era servido por HTTP, antes de o HTTPS ser liberado no Pages. Com o "Enforce HTTPS" ativo, o próprio GitHub Pages redireciona HTTP para HTTPS.
 - As fontes são baixadas pelo `next/font` durante o build e servidas do próprio domínio.
 
 ## Observações
