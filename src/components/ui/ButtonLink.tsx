@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { ExternalLink } from "./ExternalLink";
 
@@ -36,8 +37,8 @@ export function ButtonLink({
   }
 
   return (
-    <a href={href} className={className}>
+    <Link href={href} className={className}>
       {children}
-    </a>
+    </Link>
   );
 }

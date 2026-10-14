@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { site } from "@/content/site";
 import { Container } from "./ui/Container";
 
@@ -13,7 +14,7 @@ export function SiteHeader() {
         {skipLink}
       </a>
       <Container className="flex flex-col items-center gap-1 py-2 md:flex-row md:justify-between md:py-3">
-        <a
+        <Link
           href="/"
           aria-label={`${navigation.homeLabel} — ${site.name}`}
           className="flex min-h-11 items-center gap-2 rounded-md px-1 text-white"
@@ -23,17 +24,17 @@ export function SiteHeader() {
           <span className="text-sm font-medium tracking-wide text-gold-soft">
             {wordmark.secondary}
           </span>
-        </a>
+        </Link>
         <nav aria-label={navigation.label}>
           <ul className="flex items-center gap-1 sm:gap-2">
             {navigation.links.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
                   className="inline-flex min-h-11 items-center rounded-full px-3 text-sm font-medium text-blue-50 transition-colors hover:bg-white/10 hover:text-white sm:px-4"
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
