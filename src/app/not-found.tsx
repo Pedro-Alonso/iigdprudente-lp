@@ -16,10 +16,10 @@ export default function NotFound() {
   return (
     <>
       <SiteHeader />
-      <main id="conteudo" className="bg-mist pt-40 pb-24">
+      <main id="conteudo" className="min-h-[70svh] bg-mist pt-32 pb-24 md:pt-44">
         <Container className="text-center">
           <span aria-hidden="true" className="mx-auto mb-6 block h-1 w-12 rounded-full bg-gold" />
-          <h1 className="font-serif text-3xl font-semibold text-navy sm:text-4xl">
+          <h1 className="text-4xl font-extrabold tracking-tight text-navy sm:text-5xl">
             {notFound.title}
           </h1>
           <p className="mt-4 text-lg text-muted">{notFound.description}</p>

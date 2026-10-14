@@ -1,7 +1,7 @@
 import { site } from "@/content/site";
 import { Container } from "./ui/Container";
 import { ExternalLink } from "./ui/ExternalLink";
-import { InstagramIcon } from "./ui/Icons";
+import { ArrowUpRightIcon, InstagramIcon } from "./ui/Icons";
 import { SectionHeading } from "./ui/SectionHeading";
 
 export function Ministries() {
@@ -12,11 +12,12 @@ export function Ministries() {
     <section
       id={ministries.id}
       aria-labelledby={headingId}
-      className="relative isolate overflow-hidden bg-navy py-20 md:py-28"
+      className="relative isolate overflow-hidden bg-section-dark py-24 md:py-32"
     >
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-grid" />
       <div
         aria-hidden="true"
-        className="absolute -right-24 -bottom-24 -z-10 size-80 rotate-45 rounded-3xl border border-gold/20"
+        className="absolute -right-32 -bottom-32 -z-10 size-96 rounded-full border border-dashed border-gold/20"
       />
       <Container>
         <SectionHeading
@@ -25,19 +26,27 @@ export function Ministries() {
           intro={ministries.intro}
           tone="dark"
         />
-        <ul className="mt-12 grid gap-5 md:grid-cols-3">
+        <ul className="mt-12 grid gap-4 md:grid-cols-3">
           {ministries.profiles.map((profile) => (
-            <li key={profile.handle}>
+            <li
+              key={profile.handle}
+              className="reveal rounded-3xl bg-linear-to-br from-gold/60 via-white/10 to-royal/60 p-px"
+            >
               <ExternalLink
                 href={profile.href}
-                className="flex h-full min-h-11 items-center gap-4 rounded-2xl bg-white/5 p-6 ring-1 ring-white/15 transition-colors hover:bg-white/10"
+                className="group flex h-full flex-col gap-10 rounded-[calc(1.5rem-1px)] bg-night/85 p-7 transition-colors hover:bg-night/60"
               >
-                <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-full border border-gold/60 text-gold">
-                  <InstagramIcon className="size-6" />
+                <span className="flex items-start justify-between">
+                  <span className="grid size-14 place-items-center rounded-2xl bg-linear-to-br from-gold-light via-gold to-royal text-navy-deep shadow-lg shadow-black/30">
+                    <InstagramIcon className="size-7" />
+                  </span>
+                  <span className="grid size-10 place-items-center rounded-full bg-white/10 text-white transition-all duration-300 group-hover:bg-gold group-hover:text-navy-deep">
+                    <ArrowUpRightIcon className="size-5" />
+                  </span>
                 </span>
-                <span className="flex flex-col">
-                  <span className="font-semibold text-white">{profile.name}</span>
-                  <span className="text-gold-soft">{profile.handle}</span>
+                <span className="flex flex-col gap-1">
+                  <span className="text-lg font-bold text-white">{profile.name}</span>
+                  <span className="font-semibold text-gold-soft">{profile.handle}</span>
                 </span>
               </ExternalLink>
             </li>
