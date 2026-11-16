@@ -117,7 +117,7 @@ export const retreat = {
       value: "A partir de 12 anos",
       note: "Aberto a outros ministérios e a outras igrejas, não só da IIGD.",
     },
-    momentsTitle: "Momentos só para vocês",
+    momentsTitle: "Momentos especiais",
     moments: [
       {
         name: "Quarto Rosa",
@@ -130,8 +130,8 @@ export const retreat = {
         tone: "ice",
       },
       {
-        name: "Momento surpresa",
-        description: "Um para cada grupo. Ainda não podemos contar o que é.",
+        name: "Momento com a família",
+        description: "Na terça, um momento para viver com a família.",
         tone: "sun",
       },
     ] as const,
