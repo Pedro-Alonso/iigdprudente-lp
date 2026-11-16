@@ -41,7 +41,7 @@ export function RetreatHero() {
           {hero.kicker}
         </p>
 
-        <h1 id="retiro-title" className="mt-6 md:mt-8">
+        <h1 id="retiro-title" className="mt-14 md:mt-20">
           <span className="sr-only">
             {retreat.name} {retreat.year}, {ministry}
           </span>
