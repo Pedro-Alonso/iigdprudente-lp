@@ -136,6 +136,10 @@ export const retreat = {
         tone: "sun",
       },
     ] as const,
+    more: {
+      label: "E tem muito mais!",
+      items: ["Festas", "Vigília", "Dinâmicas"],
+    },
     guests: {
       label: "Convidados especiais",
       value: "Fique ligado para ver quem virá!",

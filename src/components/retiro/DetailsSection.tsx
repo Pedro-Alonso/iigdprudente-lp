@@ -97,6 +97,20 @@ export function DetailsSection() {
         </ul>
 
         <Card className="mt-4 text-center md:mt-6 md:py-12">
+          <p className={labelClasses}>{details.more.label}</p>
+          <ul className="mt-5 flex flex-wrap justify-center gap-3">
+            {details.more.items.map((item) => (
+              <li
+                key={item}
+                className="rounded-full border border-sun/50 px-6 py-3 text-xl font-semibold text-sun md:text-3xl"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </Card>
+
+        <Card className="mt-4 text-center md:mt-6 md:py-12">
           <p className={labelClasses}>{details.guests.label}</p>
           <p className="mt-4 text-2xl font-light tracking-tight text-balance md:text-4xl">
             {details.guests.value}
