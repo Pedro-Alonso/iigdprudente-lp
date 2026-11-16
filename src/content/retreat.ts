@@ -42,6 +42,7 @@ export const retreat = {
   },
   assets: {
     ogImage: `${assetPath}/og.jpg`,
+    ogImageWide: `${assetPath}/og-wide.jpg`,
     surface: `${assetPath}/mar-superficie.webp`,
     calm: `${assetPath}/mar-calmo.webp`,
     ripples: `${assetPath}/mar-ondas.webp`,
@@ -58,10 +59,10 @@ export const retreat = {
     scrollHint: "Conhecer o retiro",
   },
   levels: [
-    { id: "superficie", name: "Tornozelos" },
-    { id: "por-que-imersos", name: "Joelhos" },
-    { id: "quando-e-onde", name: "Cintura" },
-    { id: "inscricao", name: "A nado" },
+    { id: "superficie", name: "Superfície" },
+    { id: "quando-e-onde", name: "Raso" },
+    { id: "por-que-imersos", name: "Fundo" },
+    { id: "inscricao", name: "Imerso" },
   ] satisfies readonly DepthLevel[],
   depthMeterLabel: "Nível da água",
   why: {

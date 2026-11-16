@@ -21,23 +21,19 @@ function Card({ className = "", children }: { className?: string; children: Reac
 }
 
 export function DetailsSection() {
-  const { details, assets } = retreat;
+  const { details } = retreat;
 
   return (
     <section
       id={details.id}
+      data-depth="1"
       aria-labelledby="details-title"
-      className="relative isolate snap-start overflow-hidden bg-abyss text-ice"
+      className="relative isolate snap-start overflow-hidden text-ice"
     >
-      <img
-        src={assets.ripples}
-        alt=""
-        width={1080}
-        height={1350}
-        loading="lazy"
-        className="absolute inset-0 -z-20 size-full scale-y-[-1] object-cover"
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-linear-to-b from-abyss/90 via-abyss/55 via-20% to-abyss/55"
       />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-abyss/70" />
 
       <Container className="py-28 md:py-40">
         <h2

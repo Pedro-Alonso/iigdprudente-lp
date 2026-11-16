@@ -3,35 +3,32 @@
 import { useEffect, useState } from "react";
 import { retreat } from "@/content/retreat";
 
-type Target = { element: HTMLElement; index: number };
-
-/** Mostra o "nível da água" conforme a seção que está na tela (tornozelos → a nado). */
+/** Mostra o "nível da água" conforme a seção na tela (cada seção declara seu `data-depth`). */
 export function DepthMeter() {
   const [level, setLevel] = useState(0);
   const { levels, depthMeterLabel } = retreat;
 
   useEffect(() => {
-    const targets = levels
-      .map((item, index) => ({ element: document.getElementById(item.id), index }))
-      .filter((target): target is Target => target.element !== null);
+    const sections = Array.from(document.querySelectorAll<HTMLElement>("[data-depth]"));
+    const visible = new Set<HTMLElement>();
 
-    const visible = new Set<number>();
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          const index = targets.find((target) => target.element === entry.target)?.index;
-          if (index === undefined) continue;
-          if (entry.isIntersecting) visible.add(index);
-          else visible.delete(index);
+          const section = entry.target as HTMLElement;
+          if (entry.isIntersecting) visible.add(section);
+          else visible.delete(section);
         }
-        if (visible.size > 0) setLevel(Math.max(...visible));
+        if (visible.size > 0) {
+          setLevel(Math.max(...Array.from(visible, (section) => Number(section.dataset.depth))));
+        }
       },
       { rootMargin: "-45% 0px -45% 0px" },
     );
 
-    targets.forEach((target) => observer.observe(target.element));
+    sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
-  }, [levels]);
+  }, []);
 
   return (
     <nav

@@ -33,13 +33,16 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: seo.title,
     description: seo.description,
-    images: [{ url: retreat.assets.ogImage, width: 1200, height: 630, alt: seo.ogAlt }],
+    images: [
+      { url: retreat.assets.ogImage, width: 1080, height: 1350, alt: seo.ogAlt },
+      { url: retreat.assets.ogImageWide, width: 1200, height: 630, alt: seo.ogAlt },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: seo.title,
     description: seo.description,
-    images: [retreat.assets.ogImage],
+    images: [retreat.assets.ogImageWide],
   },
 };
 
@@ -50,7 +53,7 @@ export const viewport: Viewport = {
 export default function RetreatLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <div
-      className={`${sora.variable} ${dirtyline.variable} retreat-root bg-abyss font-body text-ice antialiased`}
+      className={`${sora.variable} ${dirtyline.variable} retreat-root relative isolate bg-abyss font-body text-ice antialiased`}
     >
       {children}
     </div>

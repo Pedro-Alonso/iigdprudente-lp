@@ -4,22 +4,15 @@ import { RegistrationCta, RegistrationDeadline } from "./RegistrationCta";
 import { Wordmark } from "./Wordmark";
 
 export function RetreatHero() {
-  const { hero, assets, ministry } = retreat;
+  const { hero, assets, ministry, details } = retreat;
 
   return (
     <section
       id="superficie"
+      data-depth="0"
       aria-labelledby="retiro-title"
       className="relative isolate flex min-h-svh snap-start flex-col overflow-hidden text-abyss"
     >
-      <img
-        src={assets.surface}
-        alt=""
-        width={1080}
-        height={1350}
-        fetchPriority="high"
-        className="absolute inset-0 -z-20 size-full object-cover object-[50%_62%]"
-      />
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10 bg-linear-to-b from-transparent from-40% via-abyss/45 via-62% to-abyss/90"
@@ -71,7 +64,7 @@ export function RetreatHero() {
           <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <RegistrationCta size="lg" />
             <a
-              href={`#${retreat.why.id}`}
+              href={`#${details.id}`}
               className="inline-flex min-h-14 items-center gap-2 rounded-full px-6 text-base font-semibold text-ice underline decoration-sun decoration-2 underline-offset-8 motion-safe:hover:translate-y-0.5"
             >
               {hero.scrollHint}

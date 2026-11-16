@@ -1,26 +1,17 @@
 import { Container } from "@/components/ui/Container";
 import { retreat } from "@/content/retreat";
-import { Waves } from "./Waves";
 
 export function WhySection() {
-  const { why, assets, manifesto } = retreat;
+  const { why, manifesto } = retreat;
 
   return (
     <section
       id={why.id}
+      data-depth="2"
       aria-labelledby="why-title"
-      className="relative isolate snap-start overflow-hidden bg-petrol text-ice"
+      className="relative isolate snap-start overflow-hidden text-ice"
     >
-      <img
-        src={assets.calm}
-        alt=""
-        width={1080}
-        height={1350}
-        loading="lazy"
-        className="absolute inset-0 -z-20 size-full object-cover"
-      />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-abyss/45" />
-      <Waves className="absolute inset-x-0 top-0 -z-10 h-12 text-abyss/90 md:h-20" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-abyss/55" />
 
       <Container className="grid gap-12 py-28 md:py-40 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
         <h2

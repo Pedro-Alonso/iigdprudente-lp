@@ -15,8 +15,9 @@ export function RegistrationSection() {
   return (
     <section
       id={registration.id}
+      data-depth="3"
       aria-labelledby="registration-title"
-      className="bg-abyss-glow relative isolate snap-start overflow-hidden bg-abyss text-ice"
+      className="relative isolate snap-start overflow-hidden text-ice"
     >
       <Waves className="absolute inset-x-0 top-0 -z-10 h-12 text-abyss md:h-20" />
 

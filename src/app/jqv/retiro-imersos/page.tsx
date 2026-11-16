@@ -1,3 +1,4 @@
+import { DepthBackdrop } from "@/components/retiro/DepthBackdrop";
 import { DepthMeter } from "@/components/retiro/DepthMeter";
 import { DetailsSection } from "@/components/retiro/DetailsSection";
 import { PostEventRedirect } from "@/components/retiro/PostEventRedirect";
@@ -17,12 +18,13 @@ export default function RetreatPage() {
       >
         {site.skipLink}
       </a>
+      <DepthBackdrop />
       <DepthMeter />
       <main id="conteudo">
         <RetreatHero />
+        <DetailsSection />
         <WhySection />
         <VerseSection />
-        <DetailsSection />
         <RegistrationSection />
       </main>
       <RegistrationBar />

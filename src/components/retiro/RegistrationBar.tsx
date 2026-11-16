@@ -15,7 +15,7 @@ export function RegistrationBar() {
   const { bar, registration } = retreat;
 
   return (
-    <div className="retreat-bar fixed inset-x-3 bottom-3 z-40 mx-auto max-w-md md:max-w-lg">
+    <div className="retreat-bar fixed inset-x-3 bottom-3 z-40 mx-auto max-w-md lg:inset-x-auto lg:top-5 lg:bottom-auto lg:left-5 lg:mx-0 lg:max-w-none">
       <div className="flex items-center justify-between gap-3 rounded-full border border-ice/20 bg-abyss/85 py-2 pr-2 pl-5 shadow-2xl shadow-abyss/50 backdrop-blur-xl">
         <p role="timer" className="min-w-0 text-sm leading-tight text-ice">
           {countdown ? (

@@ -4,26 +4,16 @@ import { retreat } from "@/content/retreat";
 const stepHeights = ["h-16", "h-28", "h-44", "h-64"] as const;
 
 export function VerseSection() {
-  const { verse, assets } = retreat;
+  const { verse } = retreat;
 
   return (
     <section
       id={verse.id}
+      data-depth="2"
       aria-labelledby="verse-title"
-      className="relative isolate snap-start overflow-hidden bg-abyss text-ice"
+      className="relative isolate snap-start overflow-hidden text-ice"
     >
-      <img
-        src={assets.ripples}
-        alt=""
-        width={1080}
-        height={1350}
-        loading="lazy"
-        className="absolute inset-0 -z-20 size-full object-cover"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-linear-to-b from-abyss/80 via-abyss/55 to-abyss/85"
-      />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-abyss/55" />
 
       <Container className="py-28 md:py-40">
         <figure className="mx-auto max-w-4xl text-center">

@@ -51,12 +51,15 @@ body:has(.retreat-root) {
     }
   }
 
-  /* A barra de inscrição aparece conforme a capa sai da tela. */
-  @supports (animation-timeline: scroll()) {
-    .retreat-bar {
-      animation: retreat-bar-in linear both;
-      animation-timeline: scroll(root);
-      animation-range: 25svh 70svh;
+  /* No celular, a barra de inscrição aparece conforme a capa sai da tela. No desktop ela
+     fica sempre visível, no canto superior esquerdo. */
+  @media (max-width: 63.99rem) {
+    @supports (animation-timeline: scroll()) {
+      .retreat-bar {
+        animation: retreat-bar-in linear both;
+        animation-timeline: scroll(root);
+        animation-range: 25svh 70svh;
+      }
     }
   }
 }
