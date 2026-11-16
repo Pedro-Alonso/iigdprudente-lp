@@ -154,8 +154,8 @@ export const site = {
       },
       {
         name: "Jovens Que Vencem",
-        handle: "@jqvsedeprudente",
-        href: "https://instagram.com/jqvsedeprudente",
+        handle: "@jqvprudente",
+        href: "https://instagram.com/jqvprudente",
       },
       {
         name: "Crianças Que Vencem",
