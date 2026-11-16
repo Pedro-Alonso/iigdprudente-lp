@@ -27,7 +27,7 @@ export function Hero() {
         className="absolute inset-x-0 top-0 -z-10 h-px bg-linear-to-r from-transparent via-gold/60 to-transparent"
       />
 
-      <Container className="grid items-center gap-14 pt-24 pb-36 md:min-h-[min(100svh,60rem)] md:pt-36 md:pb-40 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
+      <Container className="grid items-center gap-14 pt-[calc(6rem+var(--banner-h,0px))] pb-36 md:min-h-[min(100svh,60rem)] md:pt-[calc(9rem+var(--banner-h,0px))] md:pb-40 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
         <div className="text-center lg:text-left">
           <p className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-white/5 px-4 py-1.5 text-sm font-semibold text-gold-light motion-safe:animate-fade-up">
             <span aria-hidden="true" className="size-1.5 rounded-full bg-gold-soft" />

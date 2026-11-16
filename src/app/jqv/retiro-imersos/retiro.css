@@ -1,0 +1,62 @@
+/* Estilos exclusivos da página do Retiro Imersos. Só CSS puro (sem @apply). */
+
+html:has(.retreat-root),
+body:has(.retreat-root) {
+  background-color: #172236;
+}
+
+.retreat-root :focus-visible {
+  outline: 3px solid #f7cf00;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+.retreat-root ::selection {
+  background-color: #f7cf00;
+  color: #172236;
+}
+
+.bg-abyss-glow {
+  background-image:
+    radial-gradient(60% 40% at 50% 0%, rgb(55 192 207 / 0.22), transparent 70%),
+    radial-gradient(50% 40% at 90% 100%, rgb(50 118 152 / 0.35), transparent 70%);
+}
+
+@keyframes retreat-wave {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes retreat-bar-in {
+  from {
+    opacity: 0;
+    transform: translateY(150%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .retreat-wave {
+    animation: retreat-wave 22s linear infinite;
+  }
+
+  /* No celular, a rolagem "engata" nas seções sem prender quem está lendo (proximity). */
+  @media (max-width: 47.99rem) {
+    html:has(.retreat-root) {
+      scroll-snap-type: y proximity;
+    }
+  }
+
+  /* A barra de inscrição aparece conforme a capa sai da tela. */
+  @supports (animation-timeline: scroll()) {
+    .retreat-bar {
+      animation: retreat-bar-in linear both;
+      animation-timeline: scroll(root);
+      animation-range: 25svh 70svh;
+    }
+  }
+}

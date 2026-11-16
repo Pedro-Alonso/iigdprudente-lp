@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { Location } from "@/components/Location";
 import { Ministries } from "@/components/Ministries";
 import { OfficialPortal } from "@/components/OfficialPortal";
+import { RetreatBanner } from "@/components/retiro/RetreatHomePromo";
 import { ServiceSchedule } from "@/components/ServiceSchedule";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StructuredData } from "@/components/StructuredData";
@@ -11,6 +12,7 @@ import { StructuredData } from "@/components/StructuredData";
 export default function HomePage() {
   return (
     <>
+      <RetreatBanner />
       <SiteHeader />
       <main id="conteudo">
         <Hero />

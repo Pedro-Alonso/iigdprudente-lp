@@ -8,7 +8,7 @@ export function SiteHeader() {
   const { wordmark, navigation, skipLink, hero } = site;
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 md:fixed md:top-4">
+    <header className="absolute inset-x-0 top-[var(--banner-h,0px)] z-50 md:fixed md:top-[calc(var(--banner-h,0px)+1rem)]">
       <a
         href="#conteudo"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-3 focus:text-navy"

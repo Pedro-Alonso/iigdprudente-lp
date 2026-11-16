@@ -20,6 +20,7 @@ O CI (`.github/workflows`) roda lint, typecheck e build com CSP. Antes de conclu
 - `src/content/site.ts`: **única fonte** de textos, horários, links e redes sociais. Mudanças de conteúdo vão só aqui.
 - `src/components/`: uma seção por componente; primitivos em `ui/`.
 - `src/lib/`: formatação de horários e JSON-LD (schema.org `Church`).
+- **Temporário (Retiro Imersos 2027, JQV):** `src/app/jqv/`, `src/app/retiro/`, `src/components/retiro/`, `src/content/retreat.ts`, `src/lib/retreat-schedule.ts` e `public/jqv/`. É a exceção à regra de `site.ts` ser a única fonte: os textos do retiro ficam em `retreat.ts` para apagar tudo junto. Depois de 09/02/2027, remover conforme a checklist no topo de `retreat.ts`.
 - `scripts/inject-csp.mjs`: calcula hashes e injeta a CSP por `<meta>` no HTML de `out/`.
 
 ## Regras do projeto
