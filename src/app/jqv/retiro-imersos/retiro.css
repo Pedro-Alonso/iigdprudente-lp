@@ -16,6 +16,11 @@ body:has(.retreat-root) {
   color: #172236;
 }
 
+/* Com o modal aberto, a página atrás não rola. */
+html:has(.retreat-modal[open]) {
+  overflow: hidden;
+}
+
 .bg-abyss-glow {
   background-image:
     radial-gradient(60% 40% at 50% 0%, rgb(55 192 207 / 0.22), transparent 70%),

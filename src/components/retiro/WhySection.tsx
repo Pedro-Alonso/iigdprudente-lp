@@ -1,8 +1,9 @@
 import { Container } from "@/components/ui/Container";
 import { retreat } from "@/content/retreat";
+import { ThemeModal } from "./ThemeModal";
 
 export function WhySection() {
-  const { why, manifesto } = retreat;
+  const { why } = retreat;
 
   return (
     <section
@@ -36,51 +37,7 @@ export function WhySection() {
             {why.motto}
           </p>
 
-          <details className="group reveal rounded-3xl border border-ice/20 bg-abyss/50 backdrop-blur-md">
-            <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 rounded-3xl px-6 text-base font-semibold text-ice marker:hidden [&::-webkit-details-marker]:hidden">
-              <span className="group-open:hidden">{why.readMore}</span>
-              <span className="hidden group-open:inline">{why.readLess}</span>
-              <span
-                aria-hidden="true"
-                className="grid size-9 shrink-0 place-items-center rounded-full bg-sun text-xl leading-none text-abyss transition-transform group-open:rotate-45"
-              >
-                +
-              </span>
-            </summary>
-            <div className="space-y-10 px-6 pt-2 pb-10 text-base leading-relaxed font-normal md:text-lg">
-              <p className="text-sm font-semibold tracking-[0.3em] text-turq uppercase">
-                {manifesto.title}
-              </p>
-              {manifesto.blocks.map((block, blockIndex) => (
-                <div key={blockIndex} className="space-y-4">
-                  {"heading" in block && block.heading ? (
-                    <h3 className="text-2xl font-semibold tracking-tight text-ice">
-                      {block.heading}
-                    </h3>
-                  ) : null}
-                  {block.paragraphs.map((paragraph) => (
-                    <p key={paragraph} className="text-ice/90">
-                      {paragraph}
-                    </p>
-                  ))}
-                  {"list" in block && block.list ? (
-                    <ul className="space-y-2 border-l-2 border-sun pl-5 text-lg font-medium text-ice">
-                      {block.list.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  ) : null}
-                  {"closing" in block && block.closing
-                    ? block.closing.map((line) => (
-                        <p key={line} className="text-ice/90">
-                          {line}
-                        </p>
-                      ))
-                    : null}
-                </div>
-              ))}
-            </div>
-          </details>
+          <ThemeModal />
         </div>
       </Container>
     </section>

@@ -74,8 +74,7 @@ export const retreat = {
       "Imersos é sobre entender que não fomos chamados para viver apenas na superfície.",
     ],
     motto: "Mais profundidade, mais presença, mais de Deus.",
-    readMore: "Ler o texto completo",
-    readLess: "Fechar o texto completo",
+    readMore: "Ler mais sobre o tema",
   },
   verse: {
     id: "versiculo",
@@ -120,8 +119,16 @@ export const retreat = {
     },
     momentsTitle: "Momentos só para vocês",
     moments: [
-      { name: "Quarto Rosa", description: "Um momento para as meninas.", tone: "rose" },
-      { name: "Papo Reto", description: "Um momento para os meninos.", tone: "ice" },
+      {
+        name: "Quarto Rosa",
+        description: "Um momento só para as meninas, com aula de pilates.",
+        tone: "rose",
+      },
+      {
+        name: "Papo Reto",
+        description: "Um momento fit com personal trainer, só para os meninos.",
+        tone: "ice",
+      },
       {
         name: "Momento surpresa",
         description: "Um para cada grupo. Ainda não podemos contar o que é.",
@@ -188,77 +195,39 @@ export const retreat = {
   },
   manifesto: {
     title: "Imersos 2027",
+    closeLabel: "Fechar",
     blocks: [
       {
         paragraphs: [
-          "Quando começamos a pensar no tema para o nosso retiro de 2027, queríamos algo que não fosse apenas bonito, que não fosse apenas uma palavra para colocar em uma camiseta ou em uma decoração, mas algo que realmente tivesse um significado, uma direção e principalmente um propósito para aquilo que acreditamos que Deus quer fazer na vida de cada jovem e adolescente.",
-          "E foi assim que chegamos ao tema IMERSOS.",
-        ],
-      },
-      {
-        heading: "Mas afinal, por que IMERSOS?",
-        paragraphs: [
-          "A palavra imersão significa estar completamente mergulhado em algo, estar envolvido por inteiro, não apenas tocar a superfície, mas entrar profundamente. E quando pensamos nisso na nossa vida com Deus, entendemos que muitas vezes queremos viver coisas profundas com Ele, mas continuamos vivendo apenas na superfície.",
-          "Queremos sentir a presença de Deus, queremos viver milagres, queremos respostas, queremos transformação, queremos experimentar coisas novas, mas será que estamos realmente dispostos a mergulhar? Será que estamos dispostos a ir mais fundo, deixar algumas coisas para trás e viver uma vida completamente entregue a Ele?",
-          "Acreditamos que 2027 precisa ser um ano de profundidade. Um ano em que não vamos nos contentar com uma vida espiritual superficial, com momentos passageiros ou com uma fé que depende apenas do que sentimos dentro de uma igreja. Queremos jovens que vivam com Deus fora das quatro paredes, que tenham intimidade, que conheçam a Palavra, que busquem a presença e que entendam que existe muito mais de Deus para viver.",
-        ],
-      },
-      {
-        heading: "O nosso versículo: Ezequiel 47:5",
-        paragraphs: [
-          "“Finalmente, mediu mais quinhentos metros, e o rio era tão fundo, que eu não podia atravessar.” (NTLH)",
-          "Mas para entender por que escolhemos esse versículo, precisamos entender o que estava acontecendo naquele momento.",
+          "Quando começamos a pensar no tema do retiro de 2027, queríamos mais do que uma palavra bonita para uma camiseta: queríamos um significado, uma direção e um propósito para aquilo que Deus quer fazer na vida de cada jovem e adolescente.",
+          "Imersão é estar completamente mergulhado, e não apenas tocar a superfície. Muitas vezes queremos viver coisas profundas com Deus, mas continuamos na superfície, com uma fé que depende só do que sentimos dentro da igreja.",
         ],
       },
       {
         heading: "O contexto bíblico",
         paragraphs: [
-          "Em Ezequiel 47, o profeta Ezequiel recebe uma visão de Deus. Ele é levado até a entrada do templo e começa a observar uma água que saía debaixo da porta do templo, em direção ao lado oriental.",
-          "Um homem o conduz por esse rio e, a cada mil côvados, a água vai ficando mais profunda.",
-          "Primeiro chega aos tornozelos, depois aos joelhos, depois à cintura, até que se transforma em um rio tão profundo que já não era possível atravessar andando, era necessário nadar.",
-          "E existe algo muito forte nessa visão, porque a água não parava de aumentar.",
-          "Mais adiante, Ezequiel também vê que esse rio por onde passava levava vida. As águas alcançavam lugares que antes eram improdutivos e, por onde o rio passava, havia transformação, árvores, frutos e vida em abundância.",
-          "Essa visão representa a restauração e a vida que vêm de Deus. É uma imagem de como a presença e a ação de Deus podem transformar aquilo que parecia sem vida.",
-          "E é exatamente por isso que esse texto conversa tanto com o nosso tema.",
+          "Em Ezequiel 47, o profeta vê um rio que sai do templo. A cada mil côvados a água fica mais funda: tornozelos, joelhos, cintura, até um rio que só se atravessa a nado. E por onde ele passa há vida, transformação e frutos.",
+          "É a imagem de como a presença de Deus restaura o que parecia sem vida e de como precisamos continuar crescendo, sem viver sempre no mesmo nível de entrega.",
         ],
       },
       {
-        heading: "Por que IMERSOS?",
+        heading: "O que esperamos de 2027",
         paragraphs: [
-          "Porque não queremos apenas molhar os pés, queremos mergulhar por inteiro.",
-          "Muitas vezes nos acostumamos a viver uma fé de momentos, buscamos a Deus quando precisamos, quando estamos passando por alguma dificuldade ou quando estamos em um ambiente que nos proporciona isso.",
-          "Mas Deus nos chama para algo mais profundo.",
-          "A água nos tornozelos representa apenas o começo, mas o rio continua crescendo. E nós também precisamos continuar crescendo. Não podemos viver sempre no mesmo nível, com a mesma entrega, com a mesma disposição e com a mesma intimidade.",
-          "IMERSOS é sobre entender que não fomos chamados para viver apenas na superfície.",
-          "É sobre permitir que Deus alcance todas as áreas da nossa vida, nossos pensamentos, nossas escolhas, nossos sonhos, nossos relacionamentos e tudo aquilo que muitas vezes tentamos manter longe da presença dEle.",
-          "É sobre parar de querer controlar tudo e aprender a confiar. É sobre não querer apenas conhecer sobre Deus, mas conhecer a Deus de verdade.",
+          "Um ano de posicionamento para a nossa geração: adolescentes e jovens com sede e fome da Palavra, que não têm vergonha do evangelho e buscam a Deus até quando ninguém está olhando.",
+          "Queremos que o retiro seja um marco, um começo, e que ninguém volte para a mesma vida de antes.",
         ],
       },
       {
-        heading: "O que esperamos de 2027?",
-        paragraphs: [
-          "Acreditamos que esse precisa ser um ano de posicionamento para a nossa geração.",
-          "Uma geração que não tenha vergonha de viver o evangelho, que não tenha uma vida com Deus apenas dentro da igreja, que não dependa da presença de outras pessoas para buscar a presença dEle.",
-          "Queremos adolescentes e jovens que tenham sede, que tenham fome da Palavra, que desejem estar perto de Deus mesmo quando ninguém estiver olhando.",
-          "Queremos que esse retiro seja mais do que cinco dias de programação, ministrações, músicas e momentos especiais. Queremos que seja um marco, um começo, uma oportunidade de despertar algo que continue depois que todos voltarem para casa.",
-          "Porque não adianta viver cinco dias de imersão e voltar para a mesma vida de antes.",
-          "O nosso desejo é que cada pessoa saia dali diferente, não porque participou de um evento, mas porque teve um encontro verdadeiro com Deus e entendeu que existe uma profundidade que ainda não experimentou.",
-        ],
-      },
-      {
-        heading: "IMERSOS é um convite.",
+        heading: "Imersos é um convite",
         paragraphs: [],
         list: [
-          "Um convite para sair da superfície.",
-          "Um convite para ir mais fundo.",
-          "Um convite para abandonar uma fé superficial.",
-          "Um convite para viver uma intimidade verdadeira com Deus.",
+          "Para sair da superfície.",
+          "Para ir mais fundo.",
+          "Para abandonar uma fé superficial.",
+          "Para viver uma intimidade verdadeira com Deus.",
         ],
         closing: [
-          "E talvez a pergunta que precisamos levar para esse retiro não seja apenas até onde queremos chegar, mas o quanto estamos dispostos a mergulhar.",
-          "Em 2027, não queremos apenas estar perto do rio. Não queremos apenas observar as águas passando.",
-          "Queremos estar dentro dele.",
-          "Queremos estar IMERSOS.",
+          "Não queremos apenas estar perto do rio, observando as águas passarem. Queremos estar dentro dele. Queremos estar IMERSOS.",
         ],
       },
     ] satisfies readonly ManifestoBlock[],
