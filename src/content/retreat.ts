@@ -121,12 +121,13 @@ export const retreat = {
     moments: [
       {
         name: "Quarto Rosa",
-        description: "Um momento só para as meninas, com aula de pilates.",
+        description: "Um momento só para as meninas: aula de pilates e comes e bebes.",
         tone: "rose",
       },
       {
         name: "Papo Reto",
-        description: "Um momento fit com personal trainer, só para os meninos.",
+        description:
+          "Um momento só para os meninos: momento fit com personal trainer e comes e bebes.",
         tone: "ice",
       },
       {
