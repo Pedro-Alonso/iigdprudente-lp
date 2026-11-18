@@ -1,4 +1,5 @@
 import { site } from "@/content/site";
+import { RetreatMinistryCard } from "./retiro/RetreatHomePromo";
 import { Container } from "./ui/Container";
 import { ExternalLink } from "./ui/ExternalLink";
 import { ArrowUpRightIcon, InstagramIcon } from "./ui/Icons";
@@ -52,6 +53,7 @@ export function Ministries() {
             </li>
           ))}
         </ul>
+        <RetreatMinistryCard />
       </Container>
     </section>
   );

@@ -49,6 +49,25 @@
   }
 }
 
+/* Retiro Imersos (JQV): temporário, remover junto com a página. */
+@theme {
+  --color-ice: #e0e3e8;
+  --color-turq: #37c0cf;
+  --color-petrol: #327698;
+  --color-abyss: #172236;
+  --color-sun: #f7cf00;
+}
+
+@theme inline {
+  --font-body: var(--font-sora), ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: var(--font-dirtyline), "Arial Black", Impact, sans-serif;
+}
+
+/* Reserva espaço para a faixa do retiro no topo da home (some depois de 09/02/2027). */
+body:has([data-retreat-banner]) {
+  --banner-h: 2.5rem;
+}
+
 @utility text-gold-gradient {
   background-image: linear-gradient(
     100deg,
